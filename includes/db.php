@@ -1,6 +1,6 @@
 <?php
 // --- Database Configuration ---
-$db_host = 'localhost:3307';
+$db_host = 'localhost';
 $db_name = 'portfolio_db';
 $db_user = 'root'; // Your database username
 $db_pass = '';     // Your database password
@@ -19,4 +19,5 @@ try {
 if (session_status() == PHP_SESSION_NONE) {
     session_start();
 }
+
 ?>
