@@ -1,0 +1,25 @@
+portfolio/
+├── admin/
+│   ├── index.php             # Admin login page
+│   ├── dashboard.php         # Main admin dashboard
+│   ├── manage_projects.php   # Add/Edit/Delete projects
+│   ├── manage_skills.php     # Add/Edit/Delete skills
+│   ├── edit_general.php      # Edit About Me, links, etc.
+│   ├── admin_header.php
+│   ├── admin_footer.php
+│   └── logout.php
+│
+├── assets/
+│   ├── css/
+│   │   ├── style.css         # Main stylesheet for portfolio
+│   │   └── admin.css         # Stylesheet for admin panel
+│   ├── js/
+│   │   └── main.js           # JavaScript for animations
+│   ├── images/               # Your profile photo, etc.
+│   └── uploads/              # For uploaded project images & resume
+│
+├── includes/
+│   ├── db.php                # Database connection
+│   └── functions.php         # Helper functions (optional)
+│
+└── index.php                 # The main public portfolio page

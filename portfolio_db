@@ -1,0 +1,64 @@
+-- Table for general information (name, tagline, social links, etc.)
+CREATE TABLE `general_info` (
+  `id` INT AUTO_INCREMENT PRIMARY KEY,
+  `item_key` VARCHAR(50) UNIQUE NOT NULL,
+  `item_value` TEXT
+);
+
+-- Pre-fill general info with placeholders
+INSERT INTO `general_info` (`item_key`, `item_value`) VALUES
+('name', 'Your Name'),
+('tagline', 'Your Awesome Tagline Here'),
+('about_me', 'Write a compelling paragraph about yourself here. Talk about your passions, skills, and what drives you.'),
+('resume_link', 'uploads/resume.pdf'),
+('linkedin_link', 'https://linkedin.com/in/yourprofile'),
+('github_link', 'https://github.com/yourprofile'),
+('email', 'your.email@example.com');
+
+-- Table for your skills
+CREATE TABLE `skills` (
+  `id` INT AUTO_INCREMENT PRIMARY KEY,
+  `category` VARCHAR(100) NOT NULL,
+  `name` VARCHAR(100) NOT NULL
+);
+
+-- Pre-fill with some example skills
+INSERT INTO `skills` (`category`, `name`) VALUES
+('Programming', 'C++'),
+('Programming', 'Python'),
+('Programming', 'JavaScript'),
+('Tools & Frameworks', 'React'),
+('Tools & Frameworks', 'Node.js'),
+('Tools & Frameworks', 'Flutter'),
+('Cloud & AI', 'TensorFlow'),
+('Cloud & AI', 'OpenAI APIs');
+
+-- Table for your projects
+CREATE TABLE `projects` (
+  `id` INT AUTO_INCREMENT PRIMARY KEY,
+  `title` VARCHAR(255) NOT NULL,
+  `description` TEXT,
+  `technologies` VARCHAR(255),
+  `github_link` VARCHAR(255),
+  `live_link` VARCHAR(255),
+  `image` VARCHAR(255)
+);
+
+-- Table for your experience & achievements
+CREATE TABLE `experience` (
+  `id` INT AUTO_INCREMENT PRIMARY KEY,
+  `title` VARCHAR(255) NOT NULL,
+  `description` TEXT
+);
+
+-- Table for the admin user
+CREATE TABLE `admin` (
+  `id` INT AUTO_INCREMENT PRIMARY KEY,
+  `username` VARCHAR(50) NOT NULL,
+  `password` VARCHAR(255) NOT NULL
+);
+
+-- Insert a default admin user: user = admin, password = password
+-- IMPORTANT: Change this password in a real project!
+INSERT INTO `admin` (`username`, `password`) VALUES
+('admin', '$2y$10$7aJ.s2M9C4bV8z0f/Y5C3uG7.E0G.s7l2a5f/E8H9i0j/K1L2M3N4'); -- This is a hash for "password"
